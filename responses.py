@@ -3,11 +3,7 @@ from urllib.parse import urlparse
 
 
 def _analyse(url: str) -> str:
-    # if '?s=' in url:
-    #     return url[:url.find('?s=')]
-    if '?si=' in url:
-        return url[:url.find('?si=')]
-    return ''
+    return url[:url.find('?si=')] if '?si=' in url else ''
 
 
 def get_response(user_input: str) -> str:
