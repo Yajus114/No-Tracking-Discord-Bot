@@ -21,7 +21,7 @@ async def send_message(message: Message, user_message: str) -> None:
         response: str = get_response(user_message)
         if response:
             await message.channel.send(f"Same link without tracking\n{response}")
-            await message.delete(delay=3)
+            # await message.delete(delay=3)
 
     except Exception as e:
         print(e)
